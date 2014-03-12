@@ -10,9 +10,8 @@ Install [node](http://nodejs.org/) and check out the [phantomjs quick start guid
 
      $ npm install phantomjs -g
 
-or to just install locally and run the example:
+To gather the pages for each language:
 
-     $ npm install
      $ phantomjs getpages.coffee
 
 analyzing results

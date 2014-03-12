@@ -1,13 +1,13 @@
-webpage = require('webpage')
-fs = require('fs')
+webpage = require 'webpage'
+fs = require 'fs'
 textOut = {}
 
 # langs = ['en', 'es']
 # TODO: headers are variable through optimizely - yikes!!
 langs = ['en', 'es', 'pt', 'de', 'ru', 'fr', 'it', 'zh', 'ja', 'ko']
 
-follow = (lang, callback) ->
 
+follow = (lang, callback) ->
   page = webpage.create()
   page.customHeaders =
     'Accept-Language': lang
@@ -47,6 +47,7 @@ follow = (lang, callback) ->
         page.close()
         callback.apply()
       , 3000
+
 
 process = -> # make the execution synchronous
   lang = langs.shift()
